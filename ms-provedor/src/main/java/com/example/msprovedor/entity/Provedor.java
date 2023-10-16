@@ -1,2 +1,22 @@
-package com.example.msprovedor.entity;public class Provedor {
+package com.example.msprovedor.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+@Entity
+@Data
+public class Provedor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String nombre;
+    private String apellido;
+    private String dni;
+    private String direccion;
+    private Integer telefono;
+    private String email;
 }
+
